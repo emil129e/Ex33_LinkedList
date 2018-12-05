@@ -41,11 +41,25 @@ namespace ADT
         public void Insert(object objekt, int index) { }
         public void Delete()
         {
-
+            Head = Head.Next;
+            Count--;
         }
         public void Delete(int index){ }
         public object ItemAt(int index)
         {
+            Node itemAt = Head;
+            if (itemAt.Next != null)
+            {
+                for (int i = 0; i < index; i++)
+                {
+                    itemAt = itemAt.Next;
+                }
+                return itemAt.Data;
+            }
+            else
+            {
+
+            }
             return null;
         }
         public override string ToString()
@@ -59,7 +73,6 @@ namespace ADT
                 toString = toString + $"{Head.Next.Data.ToString()}\n";
                 Head = Head.Next;
             }
-
 
             return toString;
 
