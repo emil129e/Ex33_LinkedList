@@ -45,28 +45,28 @@ namespace Test
             Assert.AreEqual(2, l1.Count);
             Assert.AreEqual("2 Bjørn Borg 30\n1 Anders And 15\n", l1.ToString());
         }
-        //[TestMethod]
-        //public void TestDelete()
-        //{
-        //    MyLinkedList l1 = new MyLinkedList();
+        [TestMethod]
+        public void TestDelete()
+        {
+            MyLinkedList l1 = new MyLinkedList();
 
-        //    l1.Insert(c1);
-        //    l1.Insert(c2);
-        //    l1.Delete();
-        //    Assert.AreEqual(1, l1.count);
-        //    Assert.AreEqual("1 Anders And 15\n", l1.ToString());
-        //}
-        //[TestMethod]
-        //public void TestItemAt()
-        //{
-        //    MyLinkedList l1 = new MyLinkedList();
+            l1.Insert(c1);
+            l1.Insert(c2);
+            l1.Delete();
+            Assert.AreEqual(1, l1.Count);
+            Assert.AreEqual("1 Anders And 15\n", l1.ToString());
+        }
+        [TestMethod]
+        public void TestItemAt()
+        {
+            MyLinkedList l1 = new MyLinkedList();
 
-        //    l1.Insert(c1);
-        //    l1.Insert(c2);
-        //    Assert.AreEqual(c2, l1.ItemAt(0));
-        //    Assert.AreEqual(c1, l1.ItemAt(1));
-        //    Assert.AreEqual("2 Bjørn Borg 30\n1 Anders And 15\n", l1.ToString());
-        //}
+            l1.Insert(c1);
+            l1.Insert(c2);
+            Assert.AreEqual(c2, l1.ItemAt(0));
+            Assert.AreEqual(c1, l1.ItemAt(1));
+            Assert.AreEqual("2 Bjørn Borg 30\n1 Anders And 15\n", l1.ToString());
+        }
 
         //[TestMethod]
         //public void TestInsertAt()

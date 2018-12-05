@@ -39,9 +39,15 @@ namespace ADT
             Count++;
         }
         public void Insert(object objekt, int index) { }
-        public void Delete() { }
-        public void Delete(int index) { }
-        public object ItemAt(int index) { return null; }
+        public void Delete()
+        {
+
+        }
+        public void Delete(int index){ }
+        public object ItemAt(int index)
+        {
+            return null;
+        }
         public override string ToString()
         {
                      
@@ -56,6 +62,7 @@ namespace ADT
 
 
             return toString;
+
             /* 
                          string toString = $"{Head.Data.ToString()}\n";
             Node current = Head;
@@ -72,3 +79,28 @@ namespace ADT
         }
     }
 }
+
+//public void Delete()
+//{
+//    if (Head == null)
+//    {
+//    }
+//    else
+//    {
+//        Head = Head.Next;
+//    }
+//    Count--;
+//}
+
+//public object ItemAt(int index)
+//{
+//    Node ItemAt = Head;
+
+//    for (int i = 0; i < index; i++)
+//    {
+//        ItemAt = ItemAt.Next;
+//    }
+
+
+//    return ItemAt.Data;
+//}
